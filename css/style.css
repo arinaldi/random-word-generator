@@ -1,0 +1,14 @@
+body {
+	font-family: 'Roboto Slab', serif;
+	font-size: 16px;
+	color: #444;
+}
+
+h1 {
+	color: #222;
+}
+
+select, input {
+	font-family: 'Roboto Slab', serif;
+	font-size: 13px;
+}
