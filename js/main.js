@@ -8,9 +8,9 @@ function getRandomWord() {
 	var wordLength = document.getElementById('wordLength').value;
 
 	if (wordLength === 'random') {
-		url = '//www.setgetgo.com/randomword/get.php';
+		url = 'http://www.setgetgo.com/randomword/get.php';
 	} else {
-		url = '//www.setgetgo.com/randomword/get.php?len=' + wordLength;
+		url = 'http://www.setgetgo.com/randomword/get.php?len=' + wordLength;
 	}
 
 	var request = new XMLHttpRequest();
