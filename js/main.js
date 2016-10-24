@@ -1,9 +1,7 @@
 var genBtn = document.getElementById('generate');
 var word = document.getElementById('word');
 
-genBtn.addEventListener('click', getData);
-
-/*genBtn.addEventListener('click', getRandomWord);
+genBtn.addEventListener('click', getRandomWord);
 
 function getRandomWord() {
 	var url;
@@ -17,6 +15,7 @@ function getRandomWord() {
 
 	var request = new XMLHttpRequest();
 	request.open('GET', url, true);
+	request.setRequestHeader('Content-Type', 'text/plain');
 
 	request.onload = function() {
 	  if (request.status >= 200 && request.status < 400) {
@@ -31,26 +30,4 @@ function getRandomWord() {
 	};
 
 	request.send();
-}*/
-
-function getData() {
-	var url;
-	var wordLength = document.getElementById('wordLength').value;
-
-	if (wordLength === 'random') {
-		url = 'http://www.setgetgo.com/randomword/get.php';
-	} else {
-		url = 'http://www.setgetgo.com/randomword/get.php?len=' + wordLength;
-	}
-
-	$.ajax({
-		type: 'GET',
-		url: url,
-		dataType: 'jsonp',
-		jsonpCallback: 'displayWord'
-	});
-}
-
-function displayWord(data) {
-	word.innerHTML = data.Word;
 }
