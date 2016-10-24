@@ -11,14 +11,12 @@
 </head>
 
 <body>
-	<div class="grid grid-pad">
-		<div class="col-1-4">
-			<div class="content"></div>
-		</div>
-
-		<div class="col-1-2">
-			<div class="content">
+	<div class="col-1-1">
+		<div class="content">
+			<header>
 				<h1>Random Word Generator</h1>
+			</header>
+			<main>
 				<p>Define the length of the word:</p>
 				<select name="worldLength" id="wordLength">
 					<option value="random">Random</option>
@@ -42,13 +40,13 @@
 					<option value="20">20</option>
 				</select>
 				<input type="button" value="Generate" id="generate" />
-				<p id="word"></p>
-			</div>
+				<div class="center">
+					<p id="word">&nbsp;</p>
+				</div>
+			</main>
+			<footer>You generated <span id="number">0 words</span>.</footer>
 		</div>
-
-		<div class="col-1-4">
-			<div class="content"></div>
-		</div>
+	</div>
 	
 	<script src="js/main.js"></script>
 </body>
