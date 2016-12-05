@@ -3,10 +3,7 @@ var word = document.getElementById('word');
 var number = document.getElementById('number');
 var count = 0;
 
-genBtn.addEventListener('click', getRandomWord);
-//genBtn.addEventListener('click', countClicks);
-
-function getRandomWord() {
+var getRandomWord = function() {
 	var url;
 	var wordLength = document.getElementById('wordLength').value;
 
@@ -21,7 +18,7 @@ function getRandomWord() {
 
 	request.onload = function() {
 	  if (request.status >= 200 && request.status < 400) {
-	    word.innerHTML = request.responseText;
+	    word.textContent = request.responseText;
 	    countClicks();
 
 	  } else {
@@ -33,13 +30,15 @@ function getRandomWord() {
 	};
 
 	request.send();
-}
+};
 
-function countClicks() {
+var countClicks = function() {
 	count++;
 	if (count === 1) {
-		number.innerHTML = count + ' word';
+		number.textContent = count + ' word';
 	} else {
-		number.innerHTML = count + ' words'; 
+		number.textContent = count + ' words'; 
 	}
-}
+};
+
+genBtn.addEventListener('click', getRandomWord);

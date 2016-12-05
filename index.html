@@ -6,47 +6,44 @@
     <title>Random Word Generator</title>
     <link rel='shortcut icon' href='favicon.ico?123' type='image/x-icon' />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/simplegrid.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-	<div class="col-1-1">
-		<div class="content">
-			<header>
-				<h1>Random Word Generator</h1>
-			</header>
-			<main>
-				<p>Define the length of the word:</p>
-				<select name="worldLength" id="wordLength">
-					<option value="random">Random</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-					<option value="9">9</option>
-					<option value="10">10</option>
-					<option value="11">11</option>
-					<option value="12">12</option>
-					<option value="13">13</option>
-					<option value="14">14</option>
-					<option value="15">15</option>
-					<option value="16">16</option>
-					<option value="17">17</option>
-					<option value="18">18</option>
-					<option value="19">19</option>
-					<option value="20">20</option>
-				</select>
-				<input type="button" value="Generate" id="generate" />
-				<div class="center">
-					<p id="word">&nbsp;</p>
-				</div>
-			</main>
-			<footer>You generated <span id="number">0 words</span>.</footer>
-		</div>
-	</div>
+	<header>
+		<h1>Random Word Generator</h1>
+	</header>
+	<main>
+		<section>
+			<p>Define the length of the word:</p>
+			<select name="worldLength" id="wordLength">
+				<option value="random">Random</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+			</select>
+			<input type="button" value="Generate" id="generate" />
+			<div class="center">
+				<span id="word">&nbsp;</span>
+			</div>
+		</section>
+	</main>
+	<footer>You generated <span id="number">0 words</span>.</footer>
 	
 	<script src="js/main.js"></script>
 </body>
